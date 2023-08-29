@@ -37,12 +37,15 @@
 
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        date.innerHTML = today.getDate();
+        // statement that returns "0" or ""
+        date.innerHTML = (today.getDate() < 10  ? "0" : "") + today.getDate();
         // gets number 0 index
         day.innerHTML = weekDays[today.getDay()];
         // gets a number 0 index
         month.innerHTML = months[today.getMonth()];
         year.innerHTML = today.getFullYear();
+
+
 
     </script>
 
