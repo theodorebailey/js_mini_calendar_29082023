@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank</title>
+    <link rel="stylesheet" href="s.css">
+    <script src="https://kit.fontawesome.com/a09ac47364.js" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/a09ac47364.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- create our elements -->
+    <!-- attach a class name -->
+    <!-- add styling -->
+    <div class="hero">
+        <div class="calendar">
+            <div class="left">
+                <p id="date">01</p>
+                <p id="day">Sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">January</p>
+                <p id="year">2022</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // update date content
+        const date = document.getElementById("date");
+        const day = document.getElementById("day");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+
+        const today = new Date();
+
+        const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        date.innerHTML = today.getDate();
+        // gets number 0 index
+        day.innerHTML = weekDays[today.getDay()];
+        // gets a number 0 index
+        month.innerHTML = months[today.getMonth()];
+        year.innerHTML = today.getFullYear();
+
+    </script>
+
+
+    
+
+    
+</body>
+</html>
