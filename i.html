@@ -11,12 +11,17 @@
     <!-- create our elements -->
     <!-- attach a class name -->
     <!-- add styling -->
+    <!-- create our hero element -->
     <div class="hero">
+        <!-- create our calender element -->
         <div class="calendar">
+            <!-- create a left and right side for different date elements -->
+            <!-- date and day left -->
             <div class="left">
                 <p id="date">01</p>
                 <p id="day">Sunday</p>
             </div>
+            <!-- right side is month and year, requiring more space -->
             <div class="right">
                 <p id="month">January</p>
                 <p id="year">2022</p>
@@ -24,34 +29,31 @@
         </div>
     </div>
 
+    <!-- create our script element for js functionality -->
     <script>
         // update date content
+        // grab our date, day month and year elements to populate
         const date = document.getElementById("date");
         const day = document.getElementById("day");
         const month = document.getElementById("month");
         const year = document.getElementById("year");
 
-        const today = new Date();
+        // create todays date
+        let today = new Date();
 
+        // create our weekdays starting with sunday being 0
         const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
+        // create our months to use value provided in new date
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        // statement that returns "0" or ""
+        // statement that returns "0" or "" and adds todays date to it
         date.innerHTML = (today.getDate() < 10  ? "0" : "") + today.getDate();
-        // gets number 0 index
+        // gets number 0 index and uses weekDays values to populate
         day.innerHTML = weekDays[today.getDay()];
-        // gets a number 0 index
+        // gets a number 0 index, we use value to access month values in array
         month.innerHTML = months[today.getMonth()];
+        // year is simple, just get full year
         year.innerHTML = today.getFullYear();
-
-
-
-    </script>
-
-
-    
-
-    
+    </script>   
 </body>
 </html>

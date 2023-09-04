@@ -1,3 +1,4 @@
+/* create default styling across app */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* create hero element styling */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -14,6 +16,7 @@
     justify-content: center;
 }
 
+/* create our calender styling */
 .calendar{
     width: 300px;
     height: 250px;
@@ -23,6 +26,7 @@
     border-radius: 10px;
 }
 
+/* create our left and right column styling */
 .left, .right{
     height: 100%;
     display: flex;
@@ -32,6 +36,7 @@
     flex-direction: column;
 }
 
+/* create individual right sided styling */
 .right{
     width: 42%;
     background: #f4351b;
@@ -40,10 +45,12 @@
     border-bottom-right-radius: 10px;
 }
 
+/* create individual left styling to take up more of container */
 .left{
     width: 58%;
 }
 
+/* create date styling */
 #date{
     font-size: 100px;
     line-height: 90px;
